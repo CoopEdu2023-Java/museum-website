@@ -1,0 +1,80 @@
+  .pagecontainer {
+    width: 100%;
+    height: 100vh;
+    background-image: url('/Users/xuan/Desktop/Java /museum/foremuseum/public/starbg.svg');
+    background-size: cover; 
+    background-position: center;
+    display: flex;
+  }
+  
+  .contentbox {
+    max-width: 600px;
+    width:90px;
+    height: 73px;
+    margin-top: 16px;
+    margin-left: 78px;
+  }
+  
+  .end {
+    color: #ffffff;
+  }
+  
+  .eng {
+    color: #ffffff;
+  }
+  
+  .text{
+    margin-top: 100px;
+    color: #ffffff;
+    font-size: 26px;
+    height: 400px;
+    width: 800px;
+    margin-left: 1px;
+    overflow: scroll;
+    overflow-x: hidden;
+    
+  }
+
+  .iconmenus{
+    position: relative;
+    margin-left: 1200px;
+    margin-top:  -1300px;
+    width: 100px;
+    height: 60px;
+    z-index: 1000;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px; 
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: white;
+  }
+
+  ::-webkit-scrollbar-horizontal {
+    display: none;
+  }
+
+  .back{
+    color: white;
+    font-size: 23px;
+    margin-left: 1200px;
+    white-space: nowrap;
+    letter-spacing: 4px;
+  }
+  .moon{
+      position: fixed;   
+      top: 0;  
+      right: 0;
+      margin-right: -250px;  
+      margin-top: -100px;
+      z-index: 500;
+      box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.8); 
+      border-radius: 50%;  
+  }
