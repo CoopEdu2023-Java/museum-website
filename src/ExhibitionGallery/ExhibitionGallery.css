@@ -1,0 +1,159 @@
+h1 {
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* 从这里开始是页面右侧部分的样式 */
+.pictures {
+    position: absolute;
+    top: 18%;
+    left: 58%;
+    width: 31vw;
+    height: 63vh;
+    min-width: 258px;
+    min-height: 246px;
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.image1, .image2 {
+    min-width: 110px;
+    min-height: 143px;
+    aspect-ratio: 110/143;
+    object-fit: cover;
+}
+
+.image1 {
+    align-self: flex-start;
+}
+
+.image2 {
+    align-self: flex-end;
+}
+
+.menuButton {
+    width: 36px;
+    height: 36px;
+    margin-top: 22px;
+    margin-right: 22px;
+}
+/* 到这里是右侧页面样式结束 */
+
+/* 从这里开始是左侧页面样式开始 */
+.header {
+    display: flex;
+    flex-direction: column;
+    max-width: 55%;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+}
+
+.backButton {
+    width: 35px;
+    height: 35px;
+    margin-top: 22px;
+    margin-left: 22px;
+}
+
+.enghead {
+    font-size: 48px;
+    transition: font-size 0.3s ease;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10%;
+    margin-bottom: 0px;
+    min-width: 372px;
+    min-height: 72px;
+    width: 44%;
+    height: 19%;
+    aspect-ratio: 372/72;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: left;
+    opacity: 0.2;
+    color: #fff;
+}
+
+.maintext {
+    align-self: flex-start;
+    margin-left: 30px;
+}
+
+.mainContent {
+    align-self: flex-start;
+    color: #fff;
+}
+
+.CNhead {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    color: #fff;
+}
+
+.backButton {
+    border: none; 
+    padding: 0;
+    background: none;
+}
+
+.backButton img {
+    width: 35pt;
+    height: 35pt;
+}
+
+.menuButton{
+    border: none;
+    padding: 0;
+    background: none;
+}
+
+.menuButton img {
+    width: 50px;
+    height: 50px;
+}
+/* 到这里是左侧页面样式结束 */
+
+main {
+    margin-top: 20px;
+}
+
+#root {
+    height: 100%;
+    width: 100%;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;  /* 防止出现滚动条 */
+  background-image: url('/public/20241202-135831.png'); /* 添加背景图片 */
+  background-size: cover; /* 确保图片覆盖整个页面 */
+  background-position: center; /* 居中显示图片 */
+  background-repeat: no-repeat;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.App {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  min-height: 100vh;  /* 确保最小高度是视口高度 */
+}
+
+
