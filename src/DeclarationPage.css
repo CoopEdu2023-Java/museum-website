@@ -1,0 +1,56 @@
+.declaration-page {
+  position: relative;
+  height: 100%;
+  background-image: url(moon-lighted.png), url(blending.png), url(bg.png);
+  background-size: contain, 100% 100%, cover;
+  background-repeat: no-repeat;
+  background-position: bottom left, left top, left top;
+}
+
+.declaration-page-content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 23%;
+  right: 21.5%;
+  top: 4.5%;
+  bottom: 9%;
+}
+
+.declaration-page-title {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.declaration-page-title__heading {
+  font-size: 1.8em;
+  font-weight: 900;
+}
+
+.declaration-page-title__subheading {
+  font-size: 1.4em;
+  font-weight: 900;
+  margin-top: -0.3em;
+}
+
+.declaration-page-about-button {
+  position: absolute;
+  right: 1em;
+}
+
+.declaration-page-back-button {
+  position: absolute;
+  top: 22pt;
+  left: 22pt;
+  width: 35pt;
+  height: 35pt;
+}
+
+.declaration-page-continue-button {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  padding: 1em;
+  white-space: pre;
+}
