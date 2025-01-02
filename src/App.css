@@ -1,0 +1,94 @@
+.EndPage {
+  width: 1250px;
+  height: 650px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.titleChinese {
+  position: absolute;
+  font-family: HYQiHei, sans-serif;
+  font-weight: bold;
+  left: 450px;
+  top: 266px;
+  font-size: 44px;
+}
+
+.titleEnglish {
+  font-size: 30px;
+  font-family: Platform, serif;
+  position: absolute;
+  left: 450px;
+  top: 342px;
+}
+
+.artifact-container {
+  background-color: #B69A77;
+  position: absolute;
+  left: -130px;
+  top: 35px;
+  width: 326px;
+  height: 500px;
+  border: 8px solid #1E1C1C;
+  box-shadow: 0 0 60px rgba(255, 255, 255, 1);
+}
+
+.artifactTitleContainer {
+  left: -120px;
+  top: 570px;
+  position: absolute;
+  width: 326px;
+  height: 50px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.artifactTitle {
+ font-size: 20px;
+}
+
+.sectionName {
+  position: absolute;
+  left: 700px;
+  top: 150px;
+  font-size: 60px;
+  font-weight: 700;
+  opacity: 20%;
+  font-family: "Platform", sans-serif;
+}
+
+.artifactCover {
+  width: 320px;
+  height: 500px;
+}
+
+.more {
+  position: absolute;
+  left: 1170px;
+  top: 22px;
+  width:36px;
+  height: 36px;
+}
+
+.next {
+  position: absolute;
+  left: 1130px;
+  top: 600px;
+  width:105px;
+  height: 22px;
+}
+
+.translate {
+  position: absolute;
+  top: 600px;
+}
+.translationImage {
+  width: 40px;
+  height: 40px;
+}

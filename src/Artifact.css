@@ -1,0 +1,14 @@
+.artifact-container {
+    background-color: #B69A77;
+    border: #1E1C1C 8px;
+    position: absolute;
+    left: 100px;
+    top: 200px;
+    width: 410px;
+    height: 600px;
+}
+
+.artifact-cover {
+
+}
+
