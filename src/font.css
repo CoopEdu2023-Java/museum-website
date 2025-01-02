@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'HYQH40';
+    src: local("HYQiHei_40S"), url('/HYQiHei_40S.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HYQH45';
+    src: local("HYQiHei_45S"), url('/HYQiHei_45S.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HYQH50';
+    src: local("HYQiHei_50S"), url('/HYQiHei_50S.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HYQH55';
+    src: local("HYQiHei_55S"), url('/HYQiHei_55S.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HYQH70';
+    src: local("HYQiHei_70S"), url('/HYQiHei_70S.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HYQH80';
+    src: local("HYQiHei_80S"), url('/HYQiHei_80S.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Platform-Light';
+    src: local("Platform-Light"), url('/Platform-Light.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Platform-Regular';
+    src: local("Platform-Regular"), url('/Platform-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Platform-Bold';
+    src: local("Platform-Bold"), url('/Platform-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}

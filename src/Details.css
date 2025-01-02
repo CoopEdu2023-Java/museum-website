@@ -1,0 +1,198 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: left;
+}
+
+.back-button {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  font-size: 30px;
+  color: #ff6a3b;
+  text-decoration: none;
+}
+
+.menu-button {
+  position: absolute;
+  top: 22px;
+  left: 786px;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.preview img {
+  position: absolute;
+  top: 59px;
+  left: 54px;
+  width: 230px;
+  height: 296px;
+}
+
+.title {
+  font-family: 'Platform-Bold', 'HYQH80';
+  position: absolute;
+  top: 28px;
+  left: 309px;
+  height: 34px;
+  width: 302px;
+  font-size: 24px;
+  line-height: 33.6px;
+}
+
+.avatar {
+  display: flex;
+  position: absolute;
+  top: 92px;
+  left: 309px;
+  justify-content: space-between;
+  width: 136px;
+}
+
+.avatar img {
+  width: 60px;
+  height: 60px;
+}
+
+.author-title {
+  font-family: 'Platform-Light', 'HYQH45';
+  position: absolute;
+  margin-top: 2px;
+  top: 152px;
+  left: 309px;
+  font-size: 10px;
+  line-height: 13.69px;
+}
+
+.teacher-title {
+  font-family: 'Platform-Light', 'HYQH45';
+  position: absolute;
+  margin-top: 2px;
+  top: 152px;
+  left: 385px;
+  font-size: 10px;
+  line-height: 13.69px;
+}
+
+.grade-infomation {
+  font-family: 'HYQH55';
+  position: absolute;
+  top: 204px;
+  left: 309px;
+  font-size: 12px;
+  line-height: 16.88px;
+  margin-top: 0px;
+}
+
+.grade-infomation #en {
+  font-family: 'Platform-Regular';
+}
+
+.author-description-title {
+  font-family: 'HYQH70';
+  position: absolute;
+  top: 275px;
+  left: 309px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20.48px;
+  margin-top: 0px;
+}
+
+.author-description {
+  font-family: 'Platform-Light', 'HYQH45';
+  position: absolute;
+  top: 295px;
+  left: 309px;
+  font-size: 12px;
+  width: 204px;
+  line-height: 16.43px;
+  flex-wrap: wrap;
+  margin-top: 0px;
+}
+
+.author-description #text {
+  font-weight: 0;
+  font-size: 15px;
+  font-family: sans-serif;
+  flex-wrap: wrap;
+  width: 25vw;
+}
+
+.work-description-title {
+  font-family: 'HYQH70';
+  position: absolute;
+  top: 92px;
+  left: 527px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20.48px;
+  margin-top: 0px;
+}
+
+.work-description {
+  font-family: 'Platform-Light', 'HYQH45';
+  position: absolute;
+  top: 114px;
+  left: 527px;
+  width: 276px;
+  font-size: 12px;
+  line-height: 16.43px;
+}
+
+.work-description #en {
+  line-height: 14.4px;
+}
+
+
+.work-description #text-container {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+.work-description #text {
+  overflow: auto;
+  max-height: 238px;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE 10+ */
+  margin-top: 0px;
+  margin-right: 8px;
+}
+
+.work-description #text::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari */
+}
+
+#custom-scrollbar {
+  width: 0px;
+}
+
+/* 滑块 */
+.scroll-thumb {
+  width: 2px;
+  background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0));
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  /* 默认滑块高度 */
+}
+
+@media screen and (orientation: portrait) {
+  html {
+    transform-origin: top left;
+    /* 以左上角为基准点，顺时针旋转90度 然后沿Y轴反方向平移100% */
+    /* 为什么沿Y轴，因为旋转使坐标轴方向发生了变化 */
+    transform: rotate(90deg) translateY(-100%);
+    /*设置元素的宽度为 100%父元素的高度 并提高样式优先级 */
+    width: 100vh !important;
+    /*设置元素的高度为 100%父元素的宽度  并提高样式优先级 */
+    height: 100vw !important;
+    overflow: hidden;
+  }
+}
