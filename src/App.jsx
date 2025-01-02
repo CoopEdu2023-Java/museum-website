@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { useDrag } from '@use-gesture/react';
 
 import { useOrientation } from './useOrientation';
+import DeclarationPage from './DeclarationPage';
 import { SimplePage } from './SimplePage';
 import { SwiperPage } from './SwiperPage';
 import { Rotate } from './Rotate';
@@ -14,7 +15,7 @@ export default function App() {
   const [isDragging, setIsDragging] = useState(false);
   const [swiperPageState, setSwiperPageState] = useState({ canSwipeRight: false });
   const pages = [
-    <SimplePage key={1} id={1} />,
+    <DeclarationPage isLandscape={isLandscape} />,
     <SwiperPage key={2} id={2} rotate={!isLandscape} onStateChange={setSwiperPageState} />,
     <SimplePage key={3} id={3} />
   ];
@@ -80,33 +81,35 @@ export default function App() {
 
   return (
     <Rotate rotate={!isLandscape}>
-      <AnimatePresence>
-        {[-1, 0, 1].map((offset) => {
-          const pageIndex = currentIndex + offset;
-          const isMain = offset === 0;
-          const binder = binders[pageIndex] || (() => { });
-          return (
-            <motion.div
-              key={pageIndex}
-              className="full"
-              style={{ touchAction: 'none' }}
-              initial={{ x: `calc(${offset} * 100% + ${dragX}px)` }}
-              animate={{ x: `calc(${offset} * 100% + ${dragX}px)` }}
-              transition={
-                isDragging
-                  ? { type: false }
-                  : { type: 'spring', stiffness: 300, damping: 30 }
-              }
-              {...binder()}
-            >
-              <div className="full" ref={isMain ? ref : null}>
-                {/* see https://github.com/motiondivision/motion/issues/2263 */}
-                {pages[pageIndex] /* may be out of bound */}
-              </div>
-            </motion.div>
-          );
-        })}
-      </AnimatePresence>
+      <div className='full'>
+        <AnimatePresence>
+          {[-1, 0, 1].map((offset) => {
+            const pageIndex = currentIndex + offset;
+            const isMain = offset === 0;
+            const binder = binders[pageIndex] || (() => { });
+            return (
+              <motion.div
+                key={pageIndex}
+                className="full"
+                style={{ touchAction: 'none' }}
+                initial={{ x: `calc(${offset} * 100% + ${dragX}px)` }}
+                animate={{ x: `calc(${offset} * 100% + ${dragX}px)` }}
+                transition={
+                  isDragging
+                    ? { type: false }
+                    : { type: 'spring', stiffness: 300, damping: 30 }
+                }
+                {...binder()}
+              >
+                <div className="full" ref={isMain ? ref : null}>
+                  {/* see https://github.com/motiondivision/motion/issues/2263 */}
+                  {pages[pageIndex] /* may be out of bound */}
+                </div>
+              </motion.div>
+            );
+          })}
+        </AnimatePresence>
+      </div>
     </Rotate>
   );
 }
