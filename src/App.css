@@ -1,0 +1,34 @@
+/* 移除 HTML 和 body 的默认间距 */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* 防止出现滚动条 */
+}
+
+
+/* App 样式 */
+.App {
+  background-image: url('/public/background.png');
+  background-size: 100% 100%;  /* 改为精确覆盖 */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #000;  /* 添加背景色，防止图片加载时出现空白 */
+  height: 100vh;  /* 确保背景覆盖整个视口高度 */
+  width: 100vw;   /* 确保背景覆盖整个视口宽度 */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+/* App-header 样式 */
+.App-header {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
