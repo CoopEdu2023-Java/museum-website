@@ -1,0 +1,50 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: #000;
+}
+
+.moon-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: #000;
+}
+
+.moon {
+    position: relative;
+    width: 474px;
+    height: 498px;
+    background:
+        linear-gradient(-135deg, rgba(0,0,0,0) 25.05%, rgba(255, 106, 59, 0.2) 88.08%),
+        url('moon.png') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    transform: scale(1.5) rotate(360deg) scaleX(-1);
+    box-shadow: 0 0 50px 20px rgba(255, 255, 255, 0.7);
+    /*filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.8));*/
+}
+
+@media(max-width: 480px){
+    .moon{
+
+    }
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    background: url('title.png') no-repeat center center;
+    transform: scale(0.4);
+    width:3500px;
+    height:1200px;
+}
