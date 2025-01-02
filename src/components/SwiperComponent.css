@@ -1,0 +1,142 @@
+/* src/components/SwiperComponent.css */
+
+/* Swiper 容器 */
+.swiper-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%; /* 根据需要调整高度 */
+    /* left: 40%; */
+    overflow: hidden; /* 去掉滚动条，包括竖直和水平方向的 */
+    position: relative; /* 确保容器定位正确 */
+    background-color: rgba(0, 0, 0, 0); /* 整体容器背景半透明效果 */
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+/* Swiper Wrapper */
+.swiper-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    width: 100vh;
+    height: 100vh;
+    left: 50%;
+    z-index: 1;
+    display: flex;
+    margin-top: 5%;
+    /* padding-left: 0; */
+    transition-property: transform;
+    transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
+    box-sizing: content-box;
+}
+
+.top-left-button,
+.top-right-button {
+  position: absolute;
+  top: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.top-left-button {
+  left: 20px;
+  width: 36px;
+  height: 36px;
+}
+
+.top-right-button {
+  right: 20px;
+  width: 36px;
+  height: 36px;
+}
+/* 每个 swiper-slide 项目 */
+/* 每个 swiper-slide 项目 */
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #000;
+  top: 10%;
+  border-width: 8px;
+  border-style: solid;
+  border-color: black; /* 黑色边框 */
+  width: 100%;  /* 根据视口宽度的 40% 设置宽度 */
+  height: 50%; /* 根据视口高度的 60% 设置高度 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 添加过渡效果 */
+  opacity: 0.8; /* 设置半透明效果 */
+  transform-origin: center bottom; /* 放大从中心开始 */
+  position: relative;
+  box-shadow: 0 0 8px 8px rgba(255, 255, 255, 0.4); /* 默认旁边作品发光效果：Blur 8，Opacity 40% */
+}
+
+/* 鼠标悬停时的发光效果（模拟 center 效果） */
+.swiper-slide:hover {
+  transform: scale(1.25); /* 放大 */
+  box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.4); /* 增强发光效果：Blur 10，Opacity 40% */
+}
+
+/* 隐藏导航按钮 */
+.swiper-button-next,
+.swiper-button-prev {
+    display: none !important;
+}
+.swiper-pagination {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100% !important;
+  top: 30vh !important;
+  left: -50vh !important;
+}
+/* 为未激活的分页圆点设置自定义图标 */
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background-color: transparent !important;  /* 清除默认背景色 */
+  background-image: url('inactive.svg');  /* 设置未激活状态的图标 */
+  background-size: cover; /* 让图标填充圆点 */
+  background-position: center;
+  border-radius: 50%;  /* 圆形 */
+  opacity: 0.6;  /* 设置未激活时的透明度 */
+}
+
+/* 为激活的分页圆点设置自定义图标 */
+.swiper-pagination-bullet-active {
+  width: 12px;
+  height: 12px;
+  background-color: transparent !important;  /* 清除默认背景色 */
+  background-image: url('active.svg');  /* 设置激活状态的图标 */
+  background-size: cover; /* 让图标填充圆点 */
+  background-position: center;
+  border-radius: 50%;  /* 圆形 */
+  opacity: 1;  /* 设置激活时的不透明度 */
+}
+
+
+.text-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 10px;  /* 文字框距底部一定距离 */
+    height: 10%;
+    width: 100%;  /* 文字框占据滑块宽度 */
+    bottom: -65%;
+    text-align: center;
+    font-size: 2vh;
+    color: #000;
+    background-color: #D4D4D4;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.5); /* 白色阴影，模拟外部白色边框 */
+  }
