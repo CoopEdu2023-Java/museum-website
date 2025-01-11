@@ -1,0 +1,99 @@
+.declaration-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url(/public/Declaration/moon-lighted.png), url(/public/Declaration/blending.png);
+  background-size: contain, 100% 100%, cover;
+  background-repeat: no-repeat;
+  background-position: bottom left, left top, left top;
+}
+
+.declaration-page-content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 23%;
+  right: 21.5%;
+  top: 4.5%;
+  bottom: 9%;
+}
+
+.declaration-page-title {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+}
+
+.declaration-page-title__heading {
+  font-size: 1.8em;
+  font-weight: 900;
+}
+
+.declaration-page-title__subheading {
+  font-size: 1.4em;
+  font-weight: 900;
+  margin-top: -0.3em;
+}
+
+.declaration-page-about-button {
+  position: absolute;
+  right: 1em;
+}
+
+.declaration-page-back-button {
+  position: absolute;
+  top: 22pt;
+  left: 22pt;
+  width: 35pt;
+  height: 35pt;
+}
+
+.declaration-page-continue-button {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  padding: 1em;
+  white-space: pre;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  height: 100%;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.full {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}

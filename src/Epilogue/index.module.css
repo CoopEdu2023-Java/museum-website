@@ -1,0 +1,76 @@
+.contentbox {
+  max-width: 600px;
+  margin-top: 16px;
+  margin-left: 78px;
+}
+.leftSide{
+  display: flex;
+  flex-direction: column;
+  gap:10px;
+  width: 70%;
+}
+.end {
+  color: #ffffff;
+}
+
+.eng {
+  color: #ffffff;
+}
+
+.text{
+  color: #ffffff;
+  font-size: 18px;
+  margin-left: 1px;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 55vh;
+}
+
+.iconmenus{
+  position: relative;
+  margin-left: 1200px;
+  margin-top:  -1300px;
+  width: 100px;
+  z-index: 1000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-horizontal {
+  display: none;
+}
+
+.back{
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  white-space: nowrap;
+  letter-spacing: 4px;
+}
+.moon{
+  position: fixed;
+  bottom: 40%;
+  right: -20%;
+  z-index: 500;
+  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+}
+.menu{
+  z-index: 502;
+  position: fixed;
+  right: 22px;
+  top: 22px;
+}

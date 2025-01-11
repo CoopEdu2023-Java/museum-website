@@ -1,19 +1,23 @@
 @font-face {
   font-family: 'HYQiHei_25s';
-  src: url('/public/HYQiHei_25S.ttf') format('truetype');
+  src: url('/public/font/HYQiHei_25S.ttf') format('truetype');
   
 }
 
 @font-face{
   font-family: 'HYQiHei_80s';
-  src: url('/public/HYQiHei_80S.ttf') format('truetype');
+  src: url('/public/font/HYQiHei_80S.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Platform-Bold';
-  src: url('/public/Platform-Bold.ttf') format('truetype');
+  src: url('/public/font/Platform-Bold.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Platform-regular';
+  src: url('/public/font/Platform-Regular.ttf') format('truetype');
+}
 body {
   margin: 0;
   font-family: 'HYQiHei', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -27,3 +31,4 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
