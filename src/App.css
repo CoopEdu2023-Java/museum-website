@@ -4,28 +4,23 @@ body, html {
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  position: fixed; /* 防止滚动 */
-  user-select: none; /* 禁止选择 */
-  touch-action: none; /* 禁止拖动 */
+  overflow: hidden; /* 防止出现滚动条 */
 }
+
 
 /* App 样式 */
 .App {
-  background-image: url('/public/background.svg');
-  background-size: 100% 100%;
+  background-image: url('/public/background.png');
+  background-size: 100% 100%;  /* 改为精确覆盖 */
   background-repeat: no-repeat;
   background-position: center;
-  background-color: black;
-  height: 100vh;
-  width: 100vw;
+  background-color: #000;  /* 添加背景色，防止图片加载时出现空白 */
+  height: 100vh;  /* 确保背景覆盖整个视口高度 */
+  width: 100vw;   /* 确保背景覆盖整个视口宽度 */
   margin: 0;
   padding: 0;
   overflow: hidden;
   position: relative;
-  background-attachment: fixed; /* 固定背景 */
-  user-select: none; /* 禁止选中 */
-  touch-action: none; /* 禁止拖动 */
 }
 
 /* App-header 样式 */
@@ -37,22 +32,3 @@ body, html {
   overflow: hidden;
 }
 
-/* 底部图片样式 */
-.bottom-image {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.bottom-image img {
-  width: 100%;
-  height: auto;
-  pointer-events: none; /* 禁止拖动图片 */
-  user-select: none;
-  touch-action: none;
-}
