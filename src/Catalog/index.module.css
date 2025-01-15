@@ -26,14 +26,15 @@
   justify-content: center;
   align-items: center;
   color: #fff;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   transform-origin: 50% 50%;
   border: 3px solid #EC5729;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   background: rgba(0, 0, 0, 0.50);
   transition: transform 0.1s ease-out, opacity 0.1s ease-out;
-  font-family: 'HYQiHei_25s';
+  font-family: 'HYQiHei_80s';
+  font-style: normal;
 }
 
 .moonImage {

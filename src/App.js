@@ -9,6 +9,7 @@ import HomePage from "./HomePage ";
 import {useOrientation} from "./useOrientation/useOrientation";
 import DeclarationPage from "./Declaration/DeclarationPage";
 import {Rotate} from "./useOrientation/Rotate";
+import ArtifactModal from "./ArtifactModal";
 
 
 function App() {
@@ -60,7 +61,6 @@ function App() {
       element:
         <div className="App">
           <Rotate rotate={!isLandscape}>
-
           <SwiperComponent />
           <div className="bottom-image">
             <img src="/ArtifactsGallery/galaxy.svg" alt="galaxy Image" />
@@ -76,6 +76,13 @@ function App() {
             <Epilogue isLandscape={isLandscape}/>
           </Rotate>
         </div>
+    },
+    {
+      path: "/",
+      element:
+    <div className="App">
+      <ArtifactModal />
+    </div>
     }
   ]);
   return <RouterProvider router={router}/>;

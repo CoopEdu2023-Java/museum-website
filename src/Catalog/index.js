@@ -38,7 +38,6 @@ const Carousel3D = () => {
     };
     updateRadius();
 
-    // 监听窗口变化
     window.addEventListener('resize', updateRadius);
 
     return () => {
@@ -83,7 +82,7 @@ const Carousel3D = () => {
           opacity = 1;
         } else if (normalizedY < -0.7) {
           opacity = 0.05;
-        } else {  // 中间的元素
+        } else {
           opacity = 0.2 + (normalizedY + 0.7) * 0.8;
         }
         

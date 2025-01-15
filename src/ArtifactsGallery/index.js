@@ -6,6 +6,8 @@ import useUploadRecord from "./webpageRecord";
 import { Pagination } from "swiper/modules";
 import {useNavigate, useParams} from "react-router-dom";
 import EndPage from "../EndPage";
+import ArtifactModal from "../ArtifactModal";
+import http from "../http";
 
 const generateRandomColors = (count) => {
   const getRandomColor = () => {
@@ -24,19 +26,34 @@ const SwiperComponent = () => {
   const navigate = useNavigate();
   const [isEnd, setIsEnd] = useState(false);
   const { competencyName, page } = useParams();
+  const [showArtifact,  setShowArtifact] = useState('');
+  const [artifacts, setArtifacts] = useState([]);
+  // const slidesData = [
+  //   "Artifact's Name 1",
+  //   "Artifact's Name 2",
+  //   "Artifact's Name 3",
+  //   "Artifact's Name 4",
+  //   "Artifact's Name 5",
+  //   "Artifact's Name 6",
+  //   "Artifact's Name 7",
+  //   "Artifact's Name 8",
+  // ];
 
-  const slidesData = [
-    "Artifact's Name 1",
-    "Artifact's Name 2",
-    "Artifact's Name 3",
-    "Artifact's Name 4",
-    "Artifact's Name 5",
-    "Artifact's Name 6",
-    "Artifact's Name 7",
-    "Artifact's Name 8",
-  ];
+  useEffect(()=>{
+    http.get( `/artifacts/get?competency=${competencyName}`)
+      .then(response => {
+        setArtifacts(response.data.data);
+      })
+      .catch(error => {
+        console.log(error)
+      });
+  },[])
 
-  const [colors] = useState(() => generateRandomColors(slidesData.length));
+  useEffect(() => {
+    console.log(isEnd)
+  }, [isEnd]);
+
+  const [colors] = useState(() => generateRandomColors(artifacts.length));
   useUploadRecord("webpage", "Galary");
   const handleLeftButtonClick = () => {
     navigate(`/exhibition-gallery/${competencyName}/${page}`);
@@ -81,7 +98,7 @@ const SwiperComponent = () => {
           }
         }}
       >
-        {slidesData.map((name, index) => (
+        {artifacts.map((data, index) => (
           <SwiperSlide
             key={index}
             className={`swiper-slide ${isEnd ? "shift-left" : "shift-right"}` }
@@ -92,11 +109,17 @@ const SwiperComponent = () => {
               borderColor: "black",
               opacity: 0.8,
             }}
+            onClick={()=>{
+              setShowArtifact(index)
+            }}
           >
-            <div className="text-box">{name}</div>
+            <div className="text-box">{data.title}</div>
           </SwiperSlide>
         ))}
       </Swiper>
+
+      <ArtifactModal isOpen={showArtifact} setIsOpen={setShowArtifact}/>
+
       <EndPage
         isVisible={isEnd}
       />

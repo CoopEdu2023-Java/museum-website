@@ -81,12 +81,12 @@
 }
 
 .swiper-slide.shift-left {
-  transform: translateX(-400%);
+  transform: translateX(-100%);
 }
 
 /* 返回初始位置 */
 .swiper-slide.shift-right {
-  transform: translateX(0);
+  transform: translateX(300%);
 }
 
 /* 隐藏导航按钮 */

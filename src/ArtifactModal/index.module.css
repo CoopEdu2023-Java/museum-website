@@ -1,0 +1,82 @@
+.artifactModalContainer {
+  background-image: url('/public/background.svg'); /* 图片路径 */
+  background-size: cover; /* 背景图片铺满容器 */
+  background-position: center; /* 居中显示图片 */
+  background-repeat: no-repeat; /* 防止背景图片重复 */
+  background-color: rgba(0, 0, 0); /* 半透明背景色 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.artifactModal{
+  display: flex;
+  gap: 25px;
+  height: 90%;
+  width: 90%;
+  justify-content: center;
+}
+
+.img{
+  width: 30%;
+}
+
+
+
+.rightSide{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 60%;
+}
+
+.title{
+  width: 100%;
+  color: white;
+  font-family: HYQiHei_80s, serif;
+  font-size: 24px;
+}
+
+.description{
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.author{
+  width: 50%;
+}
+
+.artifactDescription{
+  display: flex;
+  flex-direction: column;
+  width: 50%
+}
+
+.introTitle{
+  font-family: HYQiHei_80s, serif;
+  color: white;
+}
+
+.intro{
+  font-family: HYQiHei_25s, serif;
+  color: white;
+  font-size: 12px;
+  font-style: normal;
+}
+
+.userList{
+  display: flex;
+}
+
+.user{
+  display: flex;
+  flex-direction: column;
+}
+
+.backIcon{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}

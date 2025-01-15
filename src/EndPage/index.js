@@ -1,13 +1,24 @@
 import styles from './index.module.css';
 import {Typography} from "@douyinfe/semi-ui";
 import {useNavigate, useParams} from "react-router-dom";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 
 const EndPage = ({ isVisible }) => {
   const { Text } = Typography;
-  const { competencyName } = useParams();
+  const [isLastCompetency, setIsLastCompetency] = useState(false);
+  const { competencyName, page } = useParams();
+  const [ nextName, setNextName ] = useState('');
   const navigate = useNavigate();
-
+  useEffect(() => {
+    const storedCompetencies = JSON.parse(localStorage.getItem('competencies'));
+    if (storedCompetencies.length - Number(page) === 0) {
+      console.log(111)
+      setIsLastCompetency(true);
+    } else {
+      setIsLastCompetency(false);
+      setNextName(storedCompetencies[Number(page)].name);
+    }
+  }, []);
 
   return (
     <div className={isVisible ? styles.endPage : styles.hidden}>
@@ -31,15 +42,15 @@ const EndPage = ({ isVisible }) => {
             color: 'white',
             fontFamily: 'Platform-bold'
           }}>
-            {competencyName}This is the end of this section
+            This is the end of this section
           </Text>
         </div>
         <img
-          src="/EndPage/next.svg"
+          src={isLastCompetency ? "/EndPage/end.svg" : "/EndPage/next.svg"}
           alt="continue"
           className={styles.next}
           onClick={() => {
-            navigate("/epilogue");
+            navigate(isLastCompetency ? "/epilogue": `/exhibition-gallery/${nextName}/${Number(page)+1}`);
           }}
         />
       </div>
